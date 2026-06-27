@@ -1,0 +1,7 @@
+{
+  "name": "freedom-trail-backend",
+  "version": "1.0.0",
+  "description": "Lambda handler for The Freedom Trail API. Uses only the AWS SDK v3 bundled in the Lambda Node.js 20 runtime, so no build/install step is required to deploy.",
+  "main": "index.js",
+  "private": true
+}

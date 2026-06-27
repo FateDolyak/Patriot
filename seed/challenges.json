@@ -1,0 +1,135 @@
+[
+  {
+    "challengeId": "liberty-toast",
+    "order": 1,
+    "type": "honor",
+    "title": "The Liberty Toast",
+    "description": "Raise a glass (lemonade counts!) and give a one-sentence toast to freedom in front of at least two other guests.",
+    "points": 10,
+    "history": {
+      "event": "First public readings of the Declaration",
+      "year": "July 1776",
+      "summary": "After the Declaration of Independence was adopted, it was read aloud in town squares to cheering crowds, often accompanied by toasts, bonfires, and the ringing of bells."
+    }
+  },
+  {
+    "challengeId": "first-signer-trivia",
+    "order": 2,
+    "type": "trivia",
+    "title": "The Boldest Signature",
+    "description": "Trivia: Who signed the Declaration of Independence first, in a signature so large the British 'could read it without spectacles'? (Enter the full name.)",
+    "points": 15,
+    "answers": ["John Hancock", "Hancock"],
+    "history": {
+      "event": "Signing of the Declaration",
+      "year": "August 2, 1776",
+      "summary": "John Hancock, President of the Continental Congress, signed first and largest. His name became American slang for a signature."
+    }
+  },
+  {
+    "challengeId": "paul-revere-ride",
+    "order": 3,
+    "type": "honor",
+    "title": "Paul Revere's Ride",
+    "description": "Complete one lap of the backyard while shouting a warning of your choosing. Speed optional, drama required.",
+    "points": 15,
+    "history": {
+      "event": "The Midnight Ride of Paul Revere",
+      "year": "April 18, 1775",
+      "summary": "Revere rode through the night to warn colonial militia that British forces were advancing, helping spark the battles of Lexington and Concord."
+    }
+  },
+  {
+    "challengeId": "boston-tea-party",
+    "order": 4,
+    "type": "peer",
+    "title": "The Boston Tea Party",
+    "description": "Toss a (provided) bean bag into the floating 'harbor' bucket from behind the line. A fellow guest must witness and verify your throw.",
+    "points": 20,
+    "history": {
+      "event": "The Boston Tea Party",
+      "year": "December 16, 1773",
+      "summary": "Colonists disguised as Mohawk people dumped 342 chests of British tea into Boston Harbor to protest taxation without representation."
+    }
+  },
+  {
+    "challengeId": "star-spangled-karaoke",
+    "order": 5,
+    "type": "peer",
+    "title": "Star-Spangled Karaoke",
+    "description": "Sing at least one line of a patriotic song loudly enough for the grill to hear. Have a witness verify your performance.",
+    "points": 20,
+    "history": {
+      "event": "Francis Scott Key writes the anthem",
+      "year": "September 1814",
+      "summary": "During the War of 1812, Key watched Fort McHenry survive a British bombardment and wrote the poem that became 'The Star-Spangled Banner.'"
+    }
+  },
+  {
+    "challengeId": "betsy-ross-flag",
+    "order": 6,
+    "type": "honor",
+    "title": "Betsy Ross Challenge",
+    "description": "Assemble the mini flag puzzle at the craft table in under two minutes.",
+    "points": 15,
+    "history": {
+      "event": "The Flag Resolution",
+      "year": "June 14, 1777",
+      "summary": "Congress resolved that the flag have thirteen stripes and thirteen stars. Legend credits Betsy Ross with sewing an early version."
+    }
+  },
+  {
+    "challengeId": "liberty-bell-trivia",
+    "order": 7,
+    "type": "trivia",
+    "title": "Let Freedom Ring",
+    "description": "Trivia: In which U.S. city can you visit the Liberty Bell today? (Enter the city name.)",
+    "points": 15,
+    "answers": ["Philadelphia", "Philly"],
+    "history": {
+      "event": "The Liberty Bell",
+      "year": "1752",
+      "summary": "Cast for the Pennsylvania State House (Independence Hall) in Philadelphia, the bell became an enduring symbol of American liberty and abolition."
+    }
+  },
+  {
+    "challengeId": "freedom-feast",
+    "order": 8,
+    "type": "honor",
+    "title": "The Freedom Feast",
+    "description": "Try one item from each color of the red-white-and-blue snack spread.",
+    "points": 10,
+    "history": {
+      "event": "Independence Day feasting tradition",
+      "year": "Since 1777",
+      "summary": "The first organized Fourth of July celebration in Philadelphia in 1777 featured a grand dinner, music, and fireworks — setting the template for the cookouts we hold today."
+    }
+  },
+  {
+    "challengeId": "adoption-year-trivia",
+    "order": 9,
+    "type": "trivia",
+    "title": "The Year It All Began",
+    "description": "Trivia: In what year was the Declaration of Independence adopted? (Enter the four-digit year.)",
+    "points": 10,
+    "answers": ["1776"],
+    "history": {
+      "event": "Adoption of the Declaration",
+      "year": "July 4, 1776",
+      "summary": "The Second Continental Congress adopted the Declaration of Independence on July 4, 1776 — the date we celebrate as Independence Day."
+    }
+  },
+  {
+    "challengeId": "fireworks-finale",
+    "order": 10,
+    "type": "peer",
+    "title": "Fireworks Finale",
+    "description": "Gather with the group for the fireworks and snap a team photo. A fellow guest verifies you made it to the grand finish of the Trail!",
+    "points": 25,
+    "history": {
+      "event": "The first fireworks celebration",
+      "year": "July 4, 1777",
+      "summary": "Philadelphia marked the first anniversary of independence with fireworks. John Adams had predicted the day should be celebrated with 'illuminations from one end of this continent to the other.'"
+    }
+  }
+]

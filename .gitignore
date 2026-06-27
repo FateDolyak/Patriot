@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+build/
+*.tsbuildinfo
+
+# CDK
+infrastructure/cdk.out/
+infrastructure/.cdk.staging/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Frontend generated config
+frontend/src/aws-config.generated.js
+
+# OS / editor
+.DS_Store
+*.log
