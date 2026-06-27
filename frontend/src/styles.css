@@ -382,3 +382,21 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
   padding: 20px 22px;
 }
+
+/* Stronger "glass" treatment for content panels: bright rim highlight, deep
+   drop shadow to lift them off the background, a top-left sheen, and a heavier
+   saturated frost so the blurred fireworks behind read clearly as glass. */
+.page-panel,
+.signin-prompt {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.05) 42%, rgba(255, 255, 255, 0.02) 100%),
+    rgba(12, 24, 60, 0.62);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 16px;
+  box-shadow:
+    0 14px 44px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
