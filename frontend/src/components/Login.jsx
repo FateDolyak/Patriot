@@ -60,7 +60,7 @@ export default function Login() {
   return (
     <div className="auth-card">
       <h2 className="auth-title">
-        {mode === MODES.SIGN_IN && 'Welcome back, patriot'}
+        {mode === MODES.SIGN_IN && 'Welcome back, patriot!'}
         {mode === MODES.SIGN_UP && 'Join the Trail'}
         {mode === MODES.CONFIRM && 'Check your email'}
       </h2>

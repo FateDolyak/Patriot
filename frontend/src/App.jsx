@@ -1,5 +1,11 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
+import { SettingsProvider } from './settings';
 import { AuthProvider, useAuth } from './auth';
+import Bunting from './components/Bunting';
+import Fireworks from './components/Fireworks';
+import EagleSwoop from './components/EagleSwoop';
+import AudioController from './components/AudioController';
+import SettingsToggles from './components/SettingsToggles';
 import ChallengesPage from './pages/ChallengesPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 import ProfilePage from './pages/ProfilePage';
@@ -9,7 +15,7 @@ function Header() {
   return (
     <header className="site-header">
       <div className="brand">
-        <span className="flag">🇺🇸</span>
+        <span className="flag">🦅</span>
         <div>
           <div className="brand-title">The Freedom Trail</div>
           <div className="brand-sub">4th of July Challenge</div>
@@ -33,32 +39,41 @@ function Header() {
           </button>
         )}
       </nav>
+      <Bunting />
     </header>
   );
 }
 
 function Shell() {
   return (
-    <div className="app">
-      <Header />
-      <main className="content">
-        <Routes>
-          <Route path="/" element={<ChallengesPage />} />
-          <Route path="/leaderboard" element={<LeaderboardPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-        </Routes>
-      </main>
-      <footer className="site-footer">
-        Let freedom ring. Complete every challenge to finish the Trail.
-      </footer>
-    </div>
+    <>
+      <Fireworks />
+      <EagleSwoop />
+      <AudioController />
+      <div className="app">
+        <SettingsToggles />
+        <Header />
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<ChallengesPage />} />
+            <Route path="/leaderboard" element={<LeaderboardPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
+          </Routes>
+        </main>
+        <footer className="site-footer">
+          Let freedom ring! Complete every challenge to finish the Freedom Trail.
+        </footer>
+      </div>
+    </>
   );
 }
 
 export default function App() {
   return (
-    <AuthProvider>
-      <Shell />
-    </AuthProvider>
+    <SettingsProvider>
+      <AuthProvider>
+        <Shell />
+      </AuthProvider>
+    </SettingsProvider>
   );
 }

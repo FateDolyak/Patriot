@@ -211,3 +211,162 @@ body {
   .btn.toggle { width: 100%; }
   .site-header { justify-content: center; text-align: center; }
 }
+
+/* ============================================================ */
+/* Over-the-top patriotic theme: fireworks bg, flag, eagle, etc */
+/* ============================================================ */
+
+/* Dark flag-blue page so fireworks pop. The canvas paints over this. */
+body {
+  background: radial-gradient(circle at 50% -10%, #16276b 0%, #0a1742 45%, #050c28 100%);
+}
+.fireworks-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.app { position: relative; z-index: 1; }
+
+/* Header contrast on the dark background */
+.site-header { border-bottom-color: #ffd24a; }
+.brand-title { color: #ffffff; text-shadow: 0 1px 4px rgba(0,0,0,0.55); }
+.brand-sub { color: #ffd24a; }
+.nav a { color: #eaf0ff; }
+.nav a.active { border-bottom-color: #ffd24a; }
+.signout { color: #cdd6f5; }
+.site-footer { color: #cdd6f5; border-top-color: rgba(255,255,255,0.18); }
+
+/* Page-level (non-card) text needs to be light now */
+.page-title { color: #ffffff; border-left-color: #ffd24a; }
+.content .center { color: #e7ecff; }
+.signin-prompt .muted { color: #e7ecff; }
+.profile .label { color: #ffffff; }
+.profile .muted { color: #dbe3ff; }
+.account-email { color: #dbe3ff; }
+
+/* Settings toggle chips */
+.settings-toggles { display: flex; justify-content: flex-end; gap: 8px; margin: 6px 0 2px; }
+.toggle-chip {
+  background: rgba(255,255,255,0.12);
+  color: #eaf0ff;
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 999px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, opacity 0.15s ease;
+}
+.toggle-chip:hover { background: rgba(255,255,255,0.22); }
+.toggle-chip.off { opacity: 0.55; }
+
+/* Eagle swoop on page load */
+.eagle-swoop {
+  position: fixed; top: 16%; left: 0;
+  width: 100%; height: 0; z-index: 60; pointer-events: none;
+}
+.eagle {
+  position: absolute;
+  font-size: 68px;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.55));
+  animation: swoop 3s ease-in forwards;
+  will-change: left, top, transform;
+}
+@keyframes swoop {
+  0%   { left: -16%; top: -60px;  transform: scale(-0.6, 0.6) rotate(6deg); }
+  45%  { top: 40px;               transform: scale(-1.35, 1.35) rotate(-5deg); }
+  100% { left: 112%; top: -50px;  transform: scale(-0.55, 0.55) rotate(7deg); }
+}
+
+/* American flag bunting draped under the header */
+.site-header { position: relative; margin-bottom: 40px; }
+.bunting {
+  position: absolute;
+  left: 0; right: 0; bottom: -20px;
+  height: 24px;
+  display: flex;
+  padding: 0 2px;
+  pointer-events: none;
+}
+.swag {
+  position: relative;
+  flex: 1 1 0;
+  height: 22px;
+  margin-left: -3px;
+  border-radius: 0 0 55% 55% / 0 0 100% 100%;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4);
+  background:
+    repeating-conic-gradient(from 180deg at 50% 0,
+      rgba(0, 0, 0, 0.12) 0deg 4deg, rgba(0, 0, 0, 0) 4deg 8deg),
+    radial-gradient(circle at 50% 0%,
+      #1d3a8a 0 32%, #ffffff 32% 64%, #b22234 64% 100%);
+}
+.swag:first-child { margin-left: 0; }
+/* little gold tie between swags */
+.swag::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 7px; height: 7px;
+  margin-left: -3px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffe27a, #d4a017);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Frosted translucent panels so the header and sign-in prompt read clearly
+   against the fireworks background. */
+.site-header {
+  background: rgba(10, 23, 66, 0.55);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 3px solid var(--red);
+  border-radius: 14px 14px 0 0;
+  padding: 16px 20px 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+.signin-prompt {
+  background: rgba(10, 23, 66, 0.55);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Solid white site header (overrides the earlier translucent panel) */
+.site-header {
+  background: #ffffff;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: 1px solid var(--border);
+  border-bottom: 3px solid var(--red);
+  border-radius: 14px 14px 0 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+.brand-title { color: var(--navy); text-shadow: none; }
+.brand-sub { color: var(--red); }
+.nav a { color: var(--navy); }
+.nav a.active { border-bottom-color: var(--red); }
+.signout { color: var(--muted); }
+
+/* 1px American-flag-inspired gradient border on the header.
+   White fill via padding-box; gradient shows through the transparent border. */
+.site-header {
+  border: 3px solid transparent;
+  border-radius: 14px 14px 0 0;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(100deg, #b22234 0%, #ffffff 50%, #1d3a8a 100%) border-box;
+}
+
+/* Dark base behind the fireworks so bursts pop (only present while animations run) */
+.fireworks-canvas { background: #04081a; }
+
+/* Darker prompt text on the auth card switch line (links stay blue) */
+.auth-card .switch { color: #374151; }
