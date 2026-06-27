@@ -16,7 +16,7 @@ export default function LeaderboardPage() {
   if (loading) return <p className="muted center">Tallying the scores…</p>;
 
   return (
-    <div>
+    <div className="page-panel">
       <h2 className="page-title">Leaderboard</h2>
       {error && <div className="error-banner">{error}</div>}
       {rows.length === 0 ? (

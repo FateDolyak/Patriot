@@ -40,7 +40,7 @@ export default function ProfilePage() {
 
   if (!user) {
     return (
-      <div>
+      <div className="page-panel">
         <p className="muted center">Sign in to view your profile.</p>
         <Login />
       </div>
@@ -48,7 +48,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="profile">
+    <div className="profile page-panel">
       <h2 className="page-title">Your Profile</h2>
       {error && <div className="error-banner">{error}</div>}
       {status && <div className="success-banner">{status}</div>}
